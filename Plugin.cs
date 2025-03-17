@@ -1,8 +1,8 @@
 using BepInEx;
 using System;
+using System.IO;
 using System.Linq;
 using System.Reflection;
-using UnityEngine;
 
 namespace ES3EncryptionKeyDumper
 {
@@ -44,7 +44,10 @@ namespace ES3EncryptionKeyDumper
                 return;
             }
 
-            Logger.LogInfo("Found ES3 encryption key: " + encryptionKey.GetValue(settingsInstance));
+            var key = encryptionKey.GetValue(settingsInstance);
+
+            Logger.LogInfo("Found ES3 encryption key: " + key);
+            File.WriteAllText("es3.key", key.ToString());
         }
     }
 }
