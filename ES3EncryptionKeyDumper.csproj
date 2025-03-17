@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+	  <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+	  <PackageReference Include="BepInEx.Core" Version="5.*" />
+	  <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+	  <PackageReference Include="UnityEngine.Modules" Version="2019.4.40" IncludeAssets="compile" />
+  </ItemGroup>
+</Project>
